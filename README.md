@@ -1,0 +1,5 @@
+This project aims to implement neural transition-based parsing for dependency grammars, focusing on unlabelled dependencies. We utilize the Arc-eager parsing algorithm, along with the static oracle traditionally used for this parser. More details about these concepts can be found in section 2 of the article available at this link (https://aclanthology.org/C12-1059/).
+
+In the first notebook, we present a baseline model that utilizes biLSTM for extracting features from the input words. Following that, in the second notebook, we introduce another model incorporating BERT in place of biLSTM. It's important to note that BERT assigns embeddings to each token derived using BPE. To derive embeddings for words split into several tokens, we average the embeddings of the tokens.
+
+For training, we utilize a dependency treebank from the Universal Dependency (UD) project, focusing on the English language.
